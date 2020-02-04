@@ -3,4 +3,6 @@ services: docker
 
 script:
   - mvn clean verify
+  - docker build -t app .
   - bash docker_push
+  - docker run app
