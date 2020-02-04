@@ -16,3 +16,4 @@ script:
   - docker tag db peax10/tp-cpe:db
   - docker push peax10/tp-cpe:http
   - docker push peax10/tp-cpe:db
+  - sonar-scanner
