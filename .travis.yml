@@ -2,5 +2,5 @@ language: java
 services: docker
 
 script:
-  - bash docker_push
   - mvn clean verify
+  - bash docker_push
