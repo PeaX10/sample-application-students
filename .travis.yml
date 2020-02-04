@@ -4,7 +4,9 @@ services: docker
 script:
   - mvn clean verify
   - docker login -u $DOCKER_LOGIN -p $DOCKER_PWD
-  - docker build -t peax10/tp-cpe:http ./sample-application-http-api-server
-  - docker build -t peax10/tp-cpe:db ./sample-application-http-api-server
+  - docker build -t http ./sample-application-http-api-server
+  - docker build -t db ./sample-application-http-api-server
+  - docker tag http peax10/tp-cpe:http
+  - docker tag db peax10/tp-cpe:db
   - docker push peax10/tp-cpe:http
   - docker push peax10/tp-cpe:db
