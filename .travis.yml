@@ -3,7 +3,7 @@ services: docker
 
 addons:
   sonarcloud:
-    organization: "test"
+    organization: "peax10"
     token:
       secure: $SONAR_SECURE
 
