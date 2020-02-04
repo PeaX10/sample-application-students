@@ -1,0 +1,14 @@
+version: '3.7'
+services:
+  db_changelog:
+    build: ./sample-application-db-changelog-job
+    networks:
+      - my-network
+  http_api:
+    build: ./sample-application-http-api-server
+    networks:
+      - my-network
+    ports:
+      - "8080:8080"
+networks:
+  my-network:
