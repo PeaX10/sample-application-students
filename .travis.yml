@@ -1,6 +1,8 @@
 language: java
 services: docker
 
-script:
-  - bash docker_push
-  - mvn clean verify
+deploy:
+  provider: script
+  script: bash docker_push
+  on:
+    branch: develop
