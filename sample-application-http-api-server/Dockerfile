@@ -1,4 +1,3 @@
-# Run
 FROM openjdk:11-jre
-COPY ./target/*.jar ./myapp.jar
+COPY ./target/*exec.jar ./myapp.jar
 ENTRYPOINT java -jar myapp.jar
