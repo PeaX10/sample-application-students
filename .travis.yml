@@ -1,6 +1,6 @@
 language: java
 services: docker
 
-before_install:
-  - echo "$DOCKER_PWD" | docker login -u "$DOCKER_LOGIN" --password-stdin
-  - docker push peax10/tp-cpe:travis
+script:
+  - bash docker_push
+  - mvn clean verify
