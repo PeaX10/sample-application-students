@@ -4,5 +4,6 @@ services: docker
 script:
   - mvn clean verify
   - docker login -u $DOCKER_LOGIN -p $DOCKER_PWD
-  - docker-compose up
+  - docker build -t http ./sample-application-http-api-server
+  - docker build -t db ./sample-application-http-api-server
   - docker push peax10/tp-cpe
