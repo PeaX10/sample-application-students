@@ -3,6 +3,6 @@ services: docker
 
 script:
   - mvn clean verify
-  - docker login -u "$DOCKER_LOGIN" -p "$DOCKER_PWD"
+  - docker login -u '${DOCKER_LOGIN}' -p '${DOCKER_PWD}'
   - docker-compose up
   - docker push peax10/tp-cpe
