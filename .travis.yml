@@ -5,7 +5,7 @@ addons:
   sonarcloud:
     organization: "test"
     token:
-      secure: "a36d7715b870be6021c44f25590e3d9a74a11259"
+      secure: "$SONAR_SECURE"
 
 script:
   - mvn clean verify sonar:sonar -Pcoverage -Dsonar.projectKey=PeaX10_sample-application-students
