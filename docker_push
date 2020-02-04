@@ -1,2 +1,2 @@
-echo "$DOCKER_PWD" | docker login -u "$DOCKER_LOGIN" --password-stdin
+docker login -u $DOCKER_LOGIN -p $DOCKER_PWD
 docker push peax10/tp-cpe
