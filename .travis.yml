@@ -1,2 +1,6 @@
 language: java
-script: mvn clean verify
+services: docker
+
+before_install:
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+  - docker push peax10/tp-cpe:travis
