@@ -1,6 +1,12 @@
 language: java
 services: docker
 
+addons:
+  sonarcloud:
+    organization: "test"
+    token:
+      secure: "a36d7715b870be6021c44f25590e3d9a74a11259"
+
 script:
   - mvn clean verify
   - docker login -u $DOCKER_LOGIN -p $DOCKER_PWD
