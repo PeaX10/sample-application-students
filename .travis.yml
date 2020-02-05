@@ -10,8 +10,8 @@ addons:
 script:
   - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.projectKey=PeaX10_sample-application-students
   - docker login -u $DOCKER_LOGIN -p $DOCKER_PWD
-  - docker build -t http ./sample-application-db-changelog-job
-  - docker build -t db ./sample-application-http-api-server
+  - docker build -t db ./sample-application-db-changelog-job
+  - docker build -t http ./sample-application-http-api-server
   - docker tag http peax10/tp-cpe:http
   - docker tag db peax10/tp-cpe:db
   - docker push peax10/tp-cpe:http
