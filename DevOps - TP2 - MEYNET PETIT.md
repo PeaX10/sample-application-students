@@ -50,7 +50,8 @@ We push images everytime in order to have access to the .jar file contained in t
 The goal here is to plug **SonarCloud** to review our code when pushed on a branch. We need to plug it with our Github repository in order for SonarCloud to analyze what we push. It gives us informations about the code coverage, bugs, good practices and other.  
 
 *__Working Quality Gate__*  
-
+Once SonarCloud is plugged, it gives us a quality on our code like so:  
+![SonarCloud view](https://raw.githubusercontent.com/PeaX10/sample-application-students/master/img/Sonarcloud.png)
   
 *__Splitted pipeline into jobs__*  
 
